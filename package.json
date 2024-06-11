@@ -1,0 +1,35 @@
+{
+  "name": "gym-api",
+  "version": "1.0.0",
+  "description": "Gympass style app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "Diego Rabelo <rabelo.github@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.12.12",
+    "@types/supertest": "^6.0.2",
+    "@vitest/ui": "^1.6.0",
+    "prisma": "^5.14.0",
+    "supertest": "^7.0.0",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0",
+    "vitest-tsconfig-paths": "^3.4.1"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^9.3.1",
+    "@fastify/jwt": "^8.0.1",
+    "@prisma/client": "^5.14.0",
+    "bcryptjs": "^2.4.3",
+    "dayjs": "^1.11.11",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0",
+    "zod": "^3.23.8"
+  }
+}
