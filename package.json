@@ -4,8 +4,18 @@
   "description": "Gympass style app",
   "main": "index.js",
   "scripts": {
+    "start:dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "test:create-prisma-environment": "npm link ./prisma/vitest-environment-prisma",
+    "test:install-prisma-environment": "npm link vitest-environment-prisma",
+    "build": "tsup src --out-dir build",
     "test": "vitest run --dir src/use-cases",
-    "start:dev": "tsx watch src/server.ts"
+    "test:watch": "vitest --dir src/use-cases",
+    "pretest:e2e": "run-s test:create-prisma-environment test:install-prisma-environment",
+    "test:e2e": "vitest run --dir src/http",
+    "test:e2e:watch": "vitest --dir src/http",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
   },
   "keywords": [],
   "author": "Diego Rabelo <rabelo.github@gmail.com>",
@@ -17,6 +27,7 @@
     "@vitest/ui": "^1.6.0",
     "prisma": "^5.14.0",
     "supertest": "^7.0.0",
+    "tsup": "^8.1.0",
     "tsx": "^4.11.0",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0",
